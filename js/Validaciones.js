@@ -36,3 +36,11 @@ export function numPositivo(numero,definicion) {
     } 
     return true;
 }
+
+export function numMayorYMenor(min,max,num) {
+    if(num<min || num>max ){
+        console.error(`Número no valido, rango(${min},${max})`);
+        return false;
+    } 
+    return true;
+}

@@ -9,13 +9,13 @@ const factura = (articulo="",unidades=undefined,precioVenta=undefined)=>{
     let precioNeto=0;
     let iva = 0;
     let descuento = 0;
-    if(!validacionCadena(articulo) 
-    || !validacionNum(unidades) 
-    || !numDiferenteDeCero(unidades)
-    || !numDiferenteDeCero(unidades) 
-    || !validacionNum(precioVenta) 
-    || !numDiferenteDeCero(precioVenta)
-    || !numDiferenteDeCero(precioVenta))
+    if(!validacionCadena(articulo,"Articulo") 
+    || !validacionNum(unidades,"Unidades") 
+    || !numDiferenteDeCero(unidades,"Unidades")
+    || !numDiferenteDeCero(unidades,"Unidades") 
+    || !validacionNum(precioVenta,"Precio de Venta") 
+    || !numDiferenteDeCero(precioVenta,"Precio de Venta")
+    || !numDiferenteDeCero(precioVenta,"Precio de Venta"))
     return 0
     else{
         total = unidades*precioVenta;
