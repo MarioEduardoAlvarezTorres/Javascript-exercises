@@ -44,3 +44,27 @@ export function numMayorYMenor(min,max,num) {
     } 
     return true;
 }
+
+export function validacionIntPositivoPrompt(valorAPedir){
+    let valorLeido;
+    do {
+        valorLeido=0;
+        valorLeido=Number(prompt(`Dame ${valorAPedir}`,''));
+        //VA A FORZAR A INGRESAR EL DATO DE FORMA CORRECTA
+        if (!validacionNum(valorLeido,valorAPedir) || (!numDiferenteDeCero(valorLeido,valorAPedir))|| !Number.isInteger(valorLeido,valorAPedir)||!numPositivo(valorLeido,valorAPedir))
+            alert(`INGRESE ${valorAPedir.toUpperCase()} DE FORMA CORRECTA`);
+    } while (!validacionNum(valorLeido) || (!numDiferenteDeCero(valorLeido))|| !Number.isInteger(valorLeido)||!numPositivo(valorLeido));
+    return valorLeido;
+}
+
+export function validacionIntPrompt(valorAPedir){
+    let valorLeido;
+    do {
+        valorLeido=0;
+        valorLeido=Number(prompt(`Dame ${valorAPedir}`,''));
+        //VA A FORZAR A INGRESAR EL DATO DE FORMA CORRECTA
+        if (!validacionNum(valorLeido,valorAPedir) || (!numDiferenteDeCero(valorLeido,valorAPedir))|| !Number.isInteger(valorLeido,valorAPedir))
+            alert(`INGRESE ${valorAPedir.toUpperCase()} DE FORMA CORRECTA`);
+    } while (!validacionNum(valorLeido) || (!numDiferenteDeCero(valorLeido))|| !Number.isInteger(valorLeido));
+    return valorLeido;
+}
